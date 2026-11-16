@@ -1,53 +1,103 @@
-// Mobile menu
-const toggle = document.querySelector('.nav-toggle');
-const nav = document.getElementById('nav');
-toggle.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', open);
-});
-nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  nav.classList.remove('open');
-  toggle.setAttribute('aria-expanded', 'false');
-}));
+(() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Footer year
-document.getElementById('year').textContent = new Date().getFullYear();
+  /* Header: solid background after scrolling */
+  const header = document.querySelector('.header');
+  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
 
-// Reveal on scroll
-const revealEls = document.querySelectorAll('.section h2, .card, .review, .pricing__group, .about__image, .form');
-revealEls.forEach(el => el.classList.add('reveal'));
-if ('IntersectionObserver' in window) {
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el => io.observe(el));
-} else {
-  revealEls.forEach(el => el.classList.add('visible'));
-}
+  /* Mobile menu */
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('nav');
+  const setMenu = (open) => {
+    nav.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Zamknij menu' : 'Otwórz menu');
+    document.body.classList.toggle('menu-open', open);
+  };
+  toggle.addEventListener('click', () => setMenu(!nav.classList.contains('is-open')));
+  nav.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && nav.classList.contains('is-open')) setMenu(false); });
 
-// Booking form (front-end only – hook up to email/booking system later)
-const form = document.getElementById('booking-form');
-const msg = form.querySelector('.form__msg');
-const dateInput = form.querySelector('[name="date"]');
-dateInput.min = new Date().toISOString().split('T')[0];
+  /* Footer year */
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  let valid = true;
-  form.querySelectorAll('[required]').forEach(field => {
-    const ok = field.value.trim() !== '' && field.checkValidity();
-    field.classList.toggle('invalid', !ok);
-    if (!ok) valid = false;
-  });
-  const phone = form.phone.value.replace(/\D/g, '');
-  if (phone.length < 9) { form.phone.classList.add('invalid'); valid = false; }
-
-  if (!valid) {
-    msg.textContent = 'Uzupełnij poprawnie wszystkie pola.';
-    msg.className = 'form__msg err';
-    return;
+  /* Reveal on scroll */
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add('is-visible'));
   }
-  msg.textContent = `Dziękujemy, ${form.name.value.trim()}! Oddzwonimy, aby potwierdzić wizytę.`;
-  msg.className = 'form__msg ok';
-  form.reset();
-});
+
+  /* Reels: play while visible, pause when scrolled away, manual play/pause */
+  document.querySelectorAll('.reel').forEach((reel) => {
+    const video = reel.querySelector('video');
+    const button = reel.querySelector('.reel__toggle');
+    let userPaused = reduceMotion; // with reduced motion nothing starts on its own
+
+    const sync = () => {
+      reel.classList.toggle('is-paused', video.paused);
+      button.setAttribute('aria-label', video.paused ? 'Odtwórz film' : 'Zatrzymaj film');
+    };
+    const play = () => video.play().catch(sync); // autoplay can be blocked (e.g. iOS power saving)
+
+    video.addEventListener('play', sync);
+    video.addEventListener('pause', sync);
+    button.addEventListener('click', () => {
+      if (video.paused) { userPaused = false; play(); } else { userPaused = true; video.pause(); }
+    });
+    video.addEventListener('click', () => button.click());
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) { if (!userPaused) play(); }
+        else if (!video.paused) video.pause();
+      }, { threshold: 0.55 }).observe(reel);
+    }
+    sync();
+  });
+
+  /* Gallery lightbox */
+  const dialog = document.querySelector('.lightbox');
+  const items = [...document.querySelectorAll('.gallery__item[data-caption]')];
+  if (dialog && typeof dialog.showModal === 'function' && items.length) {
+    const img = dialog.querySelector('img');
+    const caption = dialog.querySelector('.lightbox__caption');
+    let index = 0;
+    const show = (i) => {
+      index = (i + items.length) % items.length;
+      const item = items[index];
+      img.src = item.getAttribute('href');
+      img.alt = item.querySelector('img').alt;
+      caption.textContent = item.dataset.caption;
+    };
+    items.forEach((item, i) => item.addEventListener('click', (e) => {
+      e.preventDefault();
+      show(i);
+      dialog.showModal();
+    }));
+    dialog.querySelector('.lightbox__prev').addEventListener('click', () => show(index - 1));
+    dialog.querySelector('.lightbox__next').addEventListener('click', () => show(index + 1));
+    dialog.querySelector('.lightbox__close').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (e) => { if (e.target === dialog || e.target.tagName === 'FIGURE') dialog.close(); });
+    dialog.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') show(index - 1);
+      if (e.key === 'ArrowRight') show(index + 1);
+    });
+    let startX = null;
+    dialog.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    dialog.addEventListener('touchend', (e) => {
+      if (startX === null) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
+      startX = null;
+    });
+  }
+})();

@@ -3,192 +3,292 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Barber Studio – strzyżenie męskie i pielęgnacja brody</title>
-  <meta name="description" content="Barber Studio – klasyczne strzyżenie męskie, golenie brzytwą i pielęgnacja brody. Umów wizytę online.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Scroolu – barber i stylista fryzur i brody</title>
+  <meta name="description" content="Barber i stylista fryzur i brody. Fade, cięcia nożyczkami, tekstura, kolor i broda. Zobacz metamorfozy i umów wizytę przez Instagram.">
+  <meta name="theme-color" content="#0e0d0c">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Scroolu – barber i stylista fryzur i brody">
+  <meta property="og:description" content="Fade, cięcia nożyczkami, tekstura, kolor i broda. Zobacz metamorfozy i umów wizytę.">
+  <!-- TODO: po podpięciu domeny wpisz pełny adres, np. https://twojadomena.pl/assets/img/og.jpg -->
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/hero-trymer-1280.webp" imagesrcset="assets/img/hero-trymer-640.webp 640w, assets/img/hero-trymer-1280.webp 1280w" imagesizes="(min-width: 960px) 460px, 100vw" fetchpriority="high">
   <link rel="stylesheet" href="assets/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 21.5s-7-6.1-7-11.8a7 7 0 0 1 14 0c0 5.7-7 11.8-7 11.8z"/><circle cx="12" cy="9.6" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.2 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.6v12.8a.8.8 0 0 0 1.2.7l10-6.4a.8.8 0 0 0 0-1.4l-10-6.4A.8.8 0 0 0 8 5.6z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Przejdź do treści</a>
+
   <header class="header" id="top">
     <div class="container header__inner">
-      <a href="#top" class="logo">Barber<span>Studio</span></a>
-      <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav">
+      <a href="#top" class="logo" aria-label="Scroolu – na górę strony">Scroolu<span>.</span></a>
+      <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav">
         <span></span><span></span><span></span>
       </button>
-      <nav class="nav" id="nav">
-        <a href="#o-nas">O nas</a>
-        <a href="#uslugi">Cennik</a>
-        <a href="#zespol">Zespół</a>
-        <a href="#opinie">Opinie</a>
+      <nav class="nav" id="nav" aria-label="Menu główne">
+        <a href="#o-mnie">O mnie</a>
+        <a href="#uslugi">Usługi</a>
+        <a href="#metamorfozy">Metamorfozy</a>
+        <a href="#galeria">Galeria</a>
         <a href="#kontakt">Kontakt</a>
-        <a href="#rezerwacja" class="btn btn--small">Umów wizytę</a>
+        <a href="#kontakt" class="btn btn--small">Umów wizytę</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
+    <!-- HERO -->
     <section class="hero">
-      <div class="container hero__content">
-        <p class="eyebrow">Barbershop · od 2015 roku</p>
-        <h1>Klasyczne cięcie.<br>Nowoczesny styl.</h1>
-        <p class="hero__lead">Strzyżenie męskie, golenie brzytwą i pielęgnacja brody w miejscu, w którym czas płynie trochę wolniej.</p>
-        <div class="hero__actions">
-          <a href="#rezerwacja" class="btn">Zarezerwuj termin</a>
-          <a href="#uslugi" class="btn btn--ghost">Zobacz cennik</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="o-nas">
-      <div class="container about">
-        <div class="about__text">
-          <p class="eyebrow">O nas</p>
-          <h2>Rzemiosło, które widać w lustrze</h2>
-          <p>Jesteśmy zespołem barberów, dla których strzyżenie to coś więcej niż usługa. Słuchamy, doradzamy i dopracowujemy każdy detal – od konsultacji po ostatnie pociągnięcie brzytwą.</p>
-          <p>Używamy profesjonalnych kosmetyków, a każda wizyta kończy się stylizacją i wskazówkami, jak utrzymać fryzurę w domu.</p>
-          <ul class="stats">
-            <li><strong>10+</strong><span>lat doświadczenia</span></li>
-            <li><strong>15k</strong><span>zadowolonych klientów</span></li>
-            <li><strong>4.9★</strong><span>średnia ocen</span></li>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow">Barber · Stylista fryzur i brody</p>
+          <h1>Twój styl.<br><em>Moja precyzja.</em></h1>
+          <p class="hero__lead">Fade’y, cięcia nożyczkami, tekstura, kolor i&nbsp;broda – zawsze dopasowane do Ciebie, Twojej twarzy i&nbsp;stylu życia.</p>
+          <div class="hero__actions">
+            <a href="#kontakt" class="btn">Umów wizytę</a>
+            <a href="#metamorfozy" class="btn btn--ghost">Zobacz metamorfozy</a>
+          </div>
+          <ul class="hero__social">
+            <li><a href="https://www.instagram.com/scroolu/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>@scroolu</a></li>
+            <li><a href="https://www.tiktok.com/@scroolu636" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg>@scroolu636</a></li>
           </ul>
         </div>
-        <div class="about__image" role="img" aria-label="Wnętrze barbershopu"></div>
+        <figure class="hero__media">
+          <img src="assets/img/hero-trymer-1280.webp"
+               srcset="assets/img/hero-trymer-640.webp 640w, assets/img/hero-trymer-1280.webp 1280w"
+               sizes="(min-width: 960px) 460px, 100vw" width="1280" height="1920"
+               alt="Barber wyciąga w stronę obiektywu biały trymer" fetchpriority="high">
+        </figure>
       </div>
     </section>
 
-    <section class="section section--dark" id="uslugi">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Skin fade</span><span>Taper</span><span>Crop</span><span>Mullet</span><span>Tekstura</span><span>Loki</span><span>Kolor</span><span>Broda</span>
+        <span>Skin fade</span><span>Taper</span><span>Crop</span><span>Mullet</span><span>Tekstura</span><span>Loki</span><span>Kolor</span><span>Broda</span>
+      </div>
+    </div>
+
+    <!-- O MNIE -->
+    <section class="section" id="o-mnie">
+      <div class="container about">
+        <figure class="about__media reveal">
+          <img src="assets/img/o-mnie-1280.webp"
+               srcset="assets/img/o-mnie-640.webp 640w, assets/img/o-mnie-1280.webp 1280w"
+               sizes="(min-width: 960px) 440px, 100vw" width="1280" height="1920" loading="lazy"
+               alt="Uśmiechnięty barber pręży bicepsy obok zadowolonego klienta po strzyżeniu">
+        </figure>
+        <div class="about__text reveal">
+          <p class="eyebrow">O mnie</p>
+          <h2>Fryzura i&nbsp;broda w&nbsp;jednych rękach</h2>
+          <p class="lead">Cześć! Jestem barberem i&nbsp;stylistą fryzur i&nbsp;brody. Łączę barberską precyzję – czyste przejścia i&nbsp;ostre kontury – z&nbsp;okiem stylisty: formą, teksturą i&nbsp;kolorem.</p>
+          <p>Nie robię fryzur „z&nbsp;katalogu”. Najpierw rozmawiamy: jak nosisz włosy na co dzień, ile masz czasu rano i&nbsp;co chcesz zmienić. Dopiero potem biorę do ręki maszynkę.</p>
+          <ol class="steps">
+            <li><span>01</span><h3>Konsultacja</h3><p>Dobieram fryzurę do kształtu twarzy, rodzaju włosów i&nbsp;Twojego stylu.</p></li>
+            <li><span>02</span><h3>Cięcie</h3><p>Maszynka, nożyczki, brzytwa – precyzja w&nbsp;każdym detalu.</p></li>
+            <li><span>03</span><h3>Stylizacja</h3><p>Układam włosy i&nbsp;pokazuję, jak powtórzyć efekt w&nbsp;domu.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- USŁUGI -->
+    <section class="section services" id="uslugi">
       <div class="container">
-        <p class="eyebrow">Cennik</p>
-        <h2>Nasze usługi</h2>
-        <div class="pricing">
-          <div class="pricing__group">
-            <h3>Włosy</h3>
-            <ul class="price-list">
-              <li><span>Strzyżenie męskie</span><i></i><b>80 zł</b></li>
-              <li><span>Strzyżenie maszynką (jedna długość)</span><i></i><b>50 zł</b></li>
-              <li><span>Skin fade</span><i></i><b>90 zł</b></li>
-              <li><span>Strzyżenie dziecięce (do 12 lat)</span><i></i><b>60 zł</b></li>
-            </ul>
-          </div>
-          <div class="pricing__group">
+        <div class="section__head reveal">
+          <p class="eyebrow">Usługi i cennik</p>
+          <h2>Co mogę dla Ciebie zrobić</h2>
+        </div>
+        <!-- TODO: ceny są przykładowe – podmień na swoje -->
+        <div class="services__grid">
+          <article class="service reveal">
+            <p class="service__cat">Włosy</p>
+            <h3>Strzyżenie męskie</h3>
+            <p>Maszynka i&nbsp;nożyczki, mycie i&nbsp;stylizacja na koniec.</p>
+            <p class="service__price">80 zł</p>
+          </article>
+          <article class="service reveal">
+            <p class="service__cat">Włosy</p>
+            <h3>Fade</h3>
+            <p>Skin, low, mid lub taper – płynne przejścia od skóry.</p>
+            <p class="service__price">90 zł</p>
+          </article>
+          <article class="service reveal">
+            <p class="service__cat">Włosy</p>
+            <h3>Cięcie nożyczkami</h3>
+            <p>Dłuższe włosy, crop, mullet – praca z&nbsp;teksturą i&nbsp;lokami.</p>
+            <p class="service__price"><small>od</small>100 zł</p>
+          </article>
+          <article class="service reveal">
+            <p class="service__cat">Kolor</p>
+            <h3>Koloryzacja i&nbsp;rozjaśnianie</h3>
+            <p>Platynowy blond, tonowanie, odświeżenie koloru.</p>
+            <p class="service__price service__price--text">Wycena indywidualna</p>
+          </article>
+          <article class="service reveal">
+            <p class="service__cat">Broda</p>
             <h3>Broda</h3>
-            <ul class="price-list">
-              <li><span>Trymowanie i konturowanie brody</span><i></i><b>60 zł</b></li>
-              <li><span>Golenie brzytwą z gorącym ręcznikiem</span><i></i><b>70 zł</b></li>
-              <li><span>Combo: włosy + broda</span><i></i><b>130 zł</b></li>
-              <li><span>Odsiwianie brody</span><i></i><b>50 zł</b></li>
-            </ul>
-          </div>
+            <p>Trymowanie, kształt dopasowany do twarzy, kontury brzytwą.</p>
+            <p class="service__price">60 zł</p>
+          </article>
+          <article class="service service--featured reveal">
+            <p class="service__cat">Pakiet</p>
+            <h3>Włosy + broda</h3>
+            <p>Pełna metamorfoza podczas jednej wizyty.</p>
+            <p class="service__price">130 zł</p>
+          </article>
         </div>
-        <p class="note">Ceny przykładowe – mogą się różnić w zależności od długości włosów i barbera.</p>
+        <div class="services__foot reveal">
+          <p>Ceny orientacyjne – ostateczna kwota zależy od długości włosów i&nbsp;zakresu pracy.</p>
+          <a href="https://ig.me/m/scroolu" target="_blank" rel="noopener" class="link-arrow">Nie wiesz, co wybrać? Napisz – doradzę<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="zespol">
+    <!-- METAMORFOZY -->
+    <section class="section" id="metamorfozy">
       <div class="container">
-        <p class="eyebrow">Zespół</p>
-        <h2>Poznaj naszych barberów</h2>
-        <div class="team">
-          <article class="card">
-            <div class="card__photo" data-initials="MK"></div>
-            <h3>Marek</h3>
-            <p>Master barber · klasyczne cięcia i golenie brzytwą</p>
-          </article>
-          <article class="card">
-            <div class="card__photo" data-initials="KN"></div>
-            <h3>Kuba</h3>
-            <p>Fade’y, nowoczesne fryzury, stylizacja</p>
-          </article>
-          <article class="card">
-            <div class="card__photo" data-initials="TW"></div>
-            <h3>Tomek</h3>
-            <p>Pielęgnacja i modelowanie brody</p>
-          </article>
+        <div class="section__head reveal">
+          <p class="eyebrow">Metamorfozy</p>
+          <h2>Przed i&nbsp;po.<br> Prosto z&nbsp;fotela.</h2>
+          <p>Krótkie nagrania z&nbsp;moich wizyt. Więcej znajdziesz na Instagramie i&nbsp;TikToku.</p>
+        </div>
+        <div class="reels reveal">
+          <figure class="reel is-paused">
+            <video muted playsinline loop preload="none" poster="assets/video/metamorfoza-crop.webp"
+                   aria-label="Metamorfoza: zarośnięte włosy zamienione w krótki crop z fade’em">
+              <source src="assets/video/metamorfoza-crop.mp4" type="video/mp4">
+            </video>
+            <span class="reel__badge">Przed → po</span>
+            <button class="reel__toggle" type="button" aria-label="Odtwórz film">
+              <svg class="icon i-play" aria-hidden="true"><use href="#i-play"/></svg>
+              <svg class="icon i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+            </button>
+            <figcaption><strong>Krótki crop + fade</strong><span>Z zarośniętych włosów do świeżego cięcia</span></figcaption>
+          </figure>
+          <figure class="reel is-paused">
+            <video muted playsinline loop preload="none" poster="assets/video/metamorfoza-loki.webp"
+                   aria-label="Metamorfoza: długie włosy zamienione w krótką, kręconą fryzurę z taperem">
+              <source src="assets/video/metamorfoza-loki.mp4" type="video/mp4">
+            </video>
+            <span class="reel__badge">Przed → po</span>
+            <button class="reel__toggle" type="button" aria-label="Odtwórz film">
+              <svg class="icon i-play" aria-hidden="true"><use href="#i-play"/></svg>
+              <svg class="icon i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+            </button>
+            <figcaption><strong>Loki + taper fade</strong><span>Długie włosy → krótka, kręcona forma</span></figcaption>
+          </figure>
+          <figure class="reel is-paused">
+            <video muted playsinline loop preload="none" poster="assets/video/fade-profil.webp"
+                   aria-label="Profil klienta: kręcona góra i fade od skóry">
+              <source src="assets/video/fade-profil.mp4" type="video/mp4">
+            </video>
+            <span class="reel__badge">Efekt</span>
+            <button class="reel__toggle" type="button" aria-label="Odtwórz film">
+              <svg class="icon i-play" aria-hidden="true"><use href="#i-play"/></svg>
+              <svg class="icon i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+            </button>
+            <figcaption><strong>Skin fade + loki</strong><span>Płynne przejście od skóry</span></figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="section section--alt" id="opinie">
+    <!-- GALERIA -->
+    <section class="section gallery" id="galeria">
       <div class="container">
-        <p class="eyebrow">Opinie</p>
-        <h2>Co mówią klienci</h2>
-        <div class="reviews">
-          <blockquote class="review">
-            <p>„Najlepszy fade w mieście. Konkretna rozmowa, zero pośpiechu i efekt, który trzyma się tygodniami.”</p>
-            <cite>— Paweł</cite>
-          </blockquote>
-          <blockquote class="review">
-            <p>„Golenie brzytwą z gorącym ręcznikiem to obowiązkowy punkt. Klimat miejsca robi robotę.”</p>
-            <cite>— Adam</cite>
-          </blockquote>
-          <blockquote class="review">
-            <p>„Chodzę tu z synem od dwóch lat. Zawsze punktualnie i zawsze dobrze.”</p>
-            <cite>— Łukasz</cite>
-          </blockquote>
+        <div class="section__head reveal">
+          <p class="eyebrow">Galeria</p>
+          <h2>Z&nbsp;mojego fotela</h2>
+          <p>Kliknij zdjęcie, żeby je powiększyć.</p>
+        </div>
+        <div class="gallery__grid">
+          <a class="gallery__item reveal" href="assets/img/platyna-profil-1280.webp" data-caption="Platynowy blond z teksturą">
+            <img src="assets/img/platyna-profil-640.webp" srcset="assets/img/platyna-profil-640.webp 640w, assets/img/platyna-profil-1280.webp 1280w"
+                 sizes="(min-width: 960px) 380px, 50vw" width="640" height="853" loading="lazy"
+                 alt="Platynowy blond, teksturowany mullet – widok z profilu">
+          </a>
+          <a class="gallery__item reveal" href="assets/img/nozyczki-1280.webp" data-caption="Cięcie nożyczkami">
+            <img src="assets/img/nozyczki-640.webp" srcset="assets/img/nozyczki-640.webp 640w, assets/img/nozyczki-1280.webp 1280w"
+                 sizes="(min-width: 960px) 380px, 50vw" width="640" height="960" loading="lazy"
+                 alt="Barber strzyże klienta nożyczkami na grzebieniu">
+          </a>
+          <a class="gallery__item reveal" href="assets/img/platyna-tyl-1280.webp" data-caption="Platyna – widok z tyłu">
+            <img src="assets/img/platyna-tyl-640.webp" srcset="assets/img/platyna-tyl-640.webp 640w, assets/img/platyna-tyl-1280.webp 1280w"
+                 sizes="(min-width: 960px) 380px, 50vw" width="640" height="853" loading="lazy"
+                 alt="Platynowy blond, teksturowany mullet – widok z tyłu">
+          </a>
+          <a class="gallery__item reveal" href="assets/img/stylizacja-1280.webp" data-caption="Stylizacja">
+            <img src="assets/img/stylizacja-640.webp" srcset="assets/img/stylizacja-640.webp 640w, assets/img/stylizacja-1280.webp 1280w"
+                 sizes="(min-width: 960px) 380px, 50vw" width="640" height="960" loading="lazy"
+                 alt="Barber układa palcami włosy klienta">
+          </a>
+          <a class="gallery__item reveal" href="assets/img/lustro-1280.webp" data-caption="Efekt w lustrze">
+            <img src="assets/img/lustro-640.webp" srcset="assets/img/lustro-640.webp 640w, assets/img/lustro-1280.webp 1280w"
+                 sizes="(min-width: 960px) 380px, 50vw" width="640" height="960" loading="lazy"
+                 alt="Barber i zadowolony klient po strzyżeniu w odbiciu lustra">
+          </a>
+          <a class="gallery__item gallery__item--cta reveal" href="https://www.instagram.com/scroolu/" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+            <strong>Więcej na Instagramie</strong>
+            <span>@scroolu <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="rezerwacja">
-      <div class="container booking">
-        <div>
+    <!-- KONTAKT -->
+    <section class="section contact" id="kontakt">
+      <div class="container contact__grid">
+        <div class="contact__cta reveal">
           <p class="eyebrow">Rezerwacja</p>
           <h2>Umów wizytę</h2>
-          <p>Wypełnij formularz, a oddzwonimy, aby potwierdzić termin. Możesz też zadzwonić bezpośrednio.</p>
-          <a href="tel:+48500000000" class="phone">+48 500 000 000</a>
-        </div>
-        <form class="form" id="booking-form" novalidate>
-          <label>Imię
-            <input type="text" name="name" required autocomplete="given-name">
-          </label>
-          <label>Telefon
-            <input type="tel" name="phone" required autocomplete="tel" placeholder="np. 500 000 000">
-          </label>
-          <label>Usługa
-            <select name="service" required>
-              <option value="">Wybierz usługę</option>
-              <option>Strzyżenie męskie</option>
-              <option>Skin fade</option>
-              <option>Trymowanie brody</option>
-              <option>Golenie brzytwą</option>
-              <option>Combo: włosy + broda</option>
-            </select>
-          </label>
-          <div class="form__row">
-            <label>Data
-              <input type="date" name="date" required>
-            </label>
-            <label>Godzina
-              <input type="time" name="time" min="09:00" max="19:00" step="1800" required>
-            </label>
+          <p>Najszybciej złapiesz mnie na Instagramie. Napisz, co chcesz zmienić, a&nbsp;zaproponuję termin.</p>
+          <div class="contact__actions">
+            <a class="btn" href="https://ig.me/m/scroolu" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>Napisz na Instagramie</a>
+            <!-- TODO: wpisz swój numer telefonu -->
+            <a class="btn btn--ghost" href="tel:+48000000000"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Zadzwoń</a>
           </div>
-          <button type="submit" class="btn">Wyślij zgłoszenie</button>
-          <p class="form__msg" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-
-    <section class="section section--dark" id="kontakt">
-      <div class="container contact">
-        <div>
-          <p class="eyebrow">Kontakt</p>
-          <h2>Gdzie nas znaleźć</h2>
-          <address>
-            ul. Przykładowa 12<br>
-            00-001 Warszawa<br><br>
-            <a href="tel:+48500000000">+48 500 000 000</a><br>
-            <a href="mailto:kontakt@barberstudio.pl">kontakt@barberstudio.pl</a>
-          </address>
         </div>
-        <div>
-          <h3>Godziny otwarcia</h3>
-          <ul class="hours">
-            <li><span>Poniedziałek – Piątek</span><b>9:00 – 20:00</b></li>
-            <li><span>Sobota</span><b>9:00 – 16:00</b></li>
-            <li><span>Niedziela</span><b>nieczynne</b></li>
-          </ul>
+        <div class="contact__info">
+          <!-- TODO: adres, godziny i telefon są przykładowe – podmień na swoje -->
+          <div class="info-card reveal">
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+            <h3>Adres</h3>
+            <p>ul. Przykładowa 12<br>00-000 Miasto</p>
+          </div>
+          <div class="info-card reveal">
+            <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+            <h3>Godziny</h3>
+            <ul class="hours">
+              <li><span>Pon. – pt.</span><b>10:00 – 19:00</b></li>
+              <li><span>Sobota</span><b>9:00 – 15:00</b></li>
+              <li><span>Niedziela</span><b>nieczynne</b></li>
+            </ul>
+          </div>
+          <div class="info-card reveal">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+            <h3>Kontakt</h3>
+            <p><a href="tel:+48000000000">+48 000 000 000</a><br>
+               <a href="https://www.instagram.com/scroolu/" target="_blank" rel="noopener">Instagram @scroolu</a><br>
+               <a href="https://www.tiktok.com/@scroolu636" target="_blank" rel="noopener">TikTok @scroolu636</a></p>
+          </div>
         </div>
       </div>
     </section>
@@ -196,14 +296,27 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p>© <span id="year"></span> Barber Studio. Wszelkie prawa zastrzeżone.</p>
-      <div class="social">
-        <a href="https://www.instagram.com/scroolu/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-        <a href="https://www.tiktok.com/@scroolu636" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
-        <a href="#" aria-label="Facebook">Facebook</a>
+      <div>
+        <a href="#top" class="logo">Scroolu<span>.</span></a>
+        <p>Barber i stylista fryzur i&nbsp;brody</p>
       </div>
+      <div class="social">
+        <a href="https://www.instagram.com/scroolu/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+        <a href="https://www.tiktok.com/@scroolu636" target="_blank" rel="noopener" aria-label="TikTok"><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg></a>
+      </div>
+      <p class="footer__copy">© <span id="year">2026</span> Scroolu</p>
     </div>
   </footer>
+
+  <dialog class="lightbox" aria-label="Podgląd zdjęcia">
+    <figure>
+      <img alt="">
+      <figcaption class="lightbox__caption"></figcaption>
+    </figure>
+    <button class="lightbox__btn lightbox__close" type="button" aria-label="Zamknij">&times;</button>
+    <button class="lightbox__btn lightbox__prev" type="button" aria-label="Poprzednie zdjęcie">&#8249;</button>
+    <button class="lightbox__btn lightbox__next" type="button" aria-label="Następne zdjęcie">&#8250;</button>
+  </dialog>
 
   <script src="assets/script.js"></script>
 </body>
