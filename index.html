@@ -30,9 +30,11 @@
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.2 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.6v12.8a.8.8 0 0 0 1.2.7l10-6.4a.8.8 0 0 0 0-1.4l-10-6.4A.8.8 0 0 0 8 5.6z"/></symbol>
     <symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16.5" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m8.6 15.2 2.2 2.2 4.6-4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </svg>
 
+  <!-- TODO: link do profilu Booksy – podmień "https://booksy.com/pl-pl/" we wszystkich miejscach na adres swojego profilu -->
   <a class="skip" href="#main">Przejdź do treści</a>
 
   <header class="header" id="top">
@@ -47,7 +49,7 @@
         <a href="#metamorfozy">Metamorfozy</a>
         <a href="#galeria">Galeria</a>
         <a href="#kontakt">Kontakt</a>
-        <a href="#kontakt" class="btn btn--small">Umów wizytę</a>
+        <a href="https://booksy.com/pl-pl/" class="btn btn--small" target="_blank" rel="noopener">Umów wizytę</a>
       </nav>
     </div>
   </header>
@@ -61,7 +63,7 @@
           <h1>Twój styl.<br><em>Moja precyzja.</em></h1>
           <p class="hero__lead">Fade’y, cięcia nożyczkami, tekstura, kolor i&nbsp;broda – zawsze dopasowane do Ciebie, Twojej twarzy i&nbsp;stylu życia.</p>
           <div class="hero__actions">
-            <a href="#kontakt" class="btn">Umów wizytę</a>
+            <a href="https://booksy.com/pl-pl/" class="btn" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Umów wizytę</a>
             <a href="#metamorfozy" class="btn btn--ghost">Zobacz metamorfozy</a>
           </div>
           <ul class="hero__social">
@@ -155,8 +157,11 @@
           </article>
         </div>
         <div class="services__foot reveal">
-          <p>Ceny orientacyjne – ostateczna kwota zależy od długości włosów i&nbsp;zakresu pracy.</p>
-          <a href="https://ig.me/m/scroolu" target="_blank" rel="noopener" class="link-arrow">Nie wiesz, co wybrać? Napisz – doradzę<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <div>
+            <p>Ceny orientacyjne – ostateczna kwota zależy od długości włosów i&nbsp;zakresu pracy.</p>
+            <a href="https://ig.me/m/scroolu" target="_blank" rel="noopener" class="link-arrow">Nie wiesz, co wybrać? Napisz – doradzę<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+          <a href="https://booksy.com/pl-pl/" target="_blank" rel="noopener" class="btn"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Zarezerwuj termin</a>
         </div>
       </div>
     </section>
@@ -259,11 +264,10 @@
         <div class="contact__cta reveal">
           <p class="eyebrow">Rezerwacja</p>
           <h2>Umów wizytę</h2>
-          <p>Najszybciej złapiesz mnie na Instagramie. Napisz, co chcesz zmienić, a&nbsp;zaproponuję termin.</p>
+          <p>Wybierz usługę i&nbsp;wolny termin w&nbsp;Booksy – bez dzwonienia, o&nbsp;każdej porze. Masz pytanie? Napisz do mnie na Instagramie.</p>
           <div class="contact__actions">
-            <a class="btn" href="https://ig.me/m/scroolu" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>Napisz na Instagramie</a>
-            <!-- TODO: wpisz swój numer telefonu -->
-            <a class="btn btn--ghost" href="tel:+48000000000"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Zadzwoń</a>
+            <a class="btn" href="https://booksy.com/pl-pl/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Zarezerwuj na Booksy</a>
+            <a class="btn btn--ghost" href="https://ig.me/m/scroolu" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>Napisz na Instagramie</a>
           </div>
         </div>
         <div class="contact__info">
@@ -286,6 +290,7 @@
             <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
             <h3>Kontakt</h3>
             <p><a href="tel:+48000000000">+48 000 000 000</a><br>
+               <a href="https://booksy.com/pl-pl/" target="_blank" rel="noopener">Rezerwacja online – Booksy</a><br>
                <a href="https://www.instagram.com/scroolu/" target="_blank" rel="noopener">Instagram @scroolu</a><br>
                <a href="https://www.tiktok.com/@scroolu636" target="_blank" rel="noopener">TikTok @scroolu636</a></p>
           </div>
@@ -303,10 +308,13 @@
       <div class="social">
         <a href="https://www.instagram.com/scroolu/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a>
         <a href="https://www.tiktok.com/@scroolu636" target="_blank" rel="noopener" aria-label="TikTok"><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg></a>
+        <a href="https://booksy.com/pl-pl/" target="_blank" rel="noopener" aria-label="Rezerwacja w Booksy"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></a>
       </div>
       <p class="footer__copy">© <span id="year">2026</span> Scroolu</p>
     </div>
   </footer>
+
+  <a class="book-fab" href="https://booksy.com/pl-pl/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Umów wizytę w Booksy</a>
 
   <dialog class="lightbox" aria-label="Podgląd zdjęcia">
     <figure>

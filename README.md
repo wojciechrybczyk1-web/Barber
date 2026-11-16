@@ -18,6 +18,8 @@ assets/fonts/         czcionki Anton i Inter (hostowane lokalnie, licencja OFL)
 
 W `index.html` miejsca z przykładowymi danymi są oznaczone komentarzem `TODO`:
 
+- link do profilu Booksy – wszystkie przyciski „Umów wizytę” prowadzą na Booksy; tymczasowy adres
+  `https://booksy.com/pl-pl/` trzeba podmienić we wszystkich miejscach na link do własnego profilu,
 - ceny usług,
 - adres, godziny otwarcia, numer telefonu,
 - adres `og:image` po podpięciu domeny.

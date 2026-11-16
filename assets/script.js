@@ -64,6 +64,18 @@
     sync();
   });
 
+  /* Phones: floating booking button after the hero, hidden again near the contact section */
+  const fab = document.querySelector('.book-fab');
+  if (fab && 'IntersectionObserver' in window) {
+    const inView = new Set();
+    const fabObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => (entry.isIntersecting ? inView.add(entry.target) : inView.delete(entry.target)));
+      fab.classList.toggle('is-shown', inView.size === 0);
+    });
+    [document.querySelector('.hero'), document.getElementById('kontakt'), document.querySelector('.footer')]
+      .forEach((el) => el && fabObserver.observe(el));
+  }
+
   /* Gallery lightbox */
   const dialog = document.querySelector('.lightbox');
   const items = [...document.querySelectorAll('.gallery__item[data-caption]')];
