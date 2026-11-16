@@ -19,7 +19,6 @@
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="assets/img/hero-trymer-1280.webp" imagesrcset="assets/img/hero-trymer-640.webp 640w, assets/img/hero-trymer-1280.webp 1280w" imagesizes="(min-width: 960px) 460px, 100vw" fetchpriority="high">
   <link rel="stylesheet" href="assets/styles.css">
-  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -90,13 +89,13 @@
     <!-- O MNIE -->
     <section class="section" id="o-mnie">
       <div class="container about">
-        <figure class="about__media reveal">
+        <figure class="about__media">
           <img src="assets/img/o-mnie-1280.webp"
                srcset="assets/img/o-mnie-640.webp 640w, assets/img/o-mnie-1280.webp 1280w"
                sizes="(min-width: 960px) 440px, 100vw" width="1280" height="1920" loading="lazy"
                alt="Uśmiechnięty barber pręży bicepsy obok zadowolonego klienta po strzyżeniu">
         </figure>
-        <div class="about__text reveal">
+        <div class="about__text">
           <p class="eyebrow">O mnie</p>
           <h2>Fryzura i&nbsp;broda w&nbsp;jednych rękach</h2>
           <p class="lead">Cześć! Jestem barberem i&nbsp;stylistą fryzur i&nbsp;brody. Łączę barberską precyzję – czyste przejścia i&nbsp;ostre kontury – z&nbsp;okiem stylisty: formą, teksturą i&nbsp;kolorem.</p>
@@ -113,50 +112,50 @@
     <!-- USŁUGI -->
     <section class="section services" id="uslugi">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head">
           <p class="eyebrow">Usługi i cennik</p>
           <h2>Co mogę dla Ciebie zrobić</h2>
         </div>
         <!-- TODO: ceny są przykładowe – podmień na swoje -->
         <div class="services__grid">
-          <article class="service reveal">
+          <article class="service">
             <p class="service__cat">Włosy</p>
             <h3>Strzyżenie męskie</h3>
             <p>Maszynka i&nbsp;nożyczki, mycie i&nbsp;stylizacja na koniec.</p>
             <p class="service__price">80 zł</p>
           </article>
-          <article class="service reveal">
+          <article class="service">
             <p class="service__cat">Włosy</p>
             <h3>Fade</h3>
             <p>Skin, low, mid lub taper – płynne przejścia od skóry.</p>
             <p class="service__price">90 zł</p>
           </article>
-          <article class="service reveal">
+          <article class="service">
             <p class="service__cat">Włosy</p>
             <h3>Cięcie nożyczkami</h3>
             <p>Dłuższe włosy, crop, mullet – praca z&nbsp;teksturą i&nbsp;lokami.</p>
             <p class="service__price"><small>od</small>100 zł</p>
           </article>
-          <article class="service reveal">
+          <article class="service">
             <p class="service__cat">Kolor</p>
             <h3>Koloryzacja i&nbsp;rozjaśnianie</h3>
             <p>Platynowy blond, tonowanie, odświeżenie koloru.</p>
             <p class="service__price service__price--text">Wycena indywidualna</p>
           </article>
-          <article class="service reveal">
+          <article class="service">
             <p class="service__cat">Broda</p>
             <h3>Broda</h3>
             <p>Trymowanie, kształt dopasowany do twarzy, kontury brzytwą.</p>
             <p class="service__price">60 zł</p>
           </article>
-          <article class="service service--featured reveal">
+          <article class="service service--featured">
             <p class="service__cat">Pakiet</p>
             <h3>Włosy + broda</h3>
             <p>Pełna metamorfoza podczas jednej wizyty.</p>
             <p class="service__price">130 zł</p>
           </article>
         </div>
-        <div class="services__foot reveal">
+        <div class="services__foot">
           <div>
             <p>Ceny orientacyjne – ostateczna kwota zależy od długości włosów i&nbsp;zakresu pracy.</p>
             <a href="https://ig.me/m/scroolu" target="_blank" rel="noopener" class="link-arrow">Nie wiesz, co wybrać? Napisz – doradzę<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -169,12 +168,12 @@
     <!-- METAMORFOZY -->
     <section class="section" id="metamorfozy">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head">
           <p class="eyebrow">Metamorfozy</p>
           <h2>Przed i&nbsp;po.<br> Prosto z&nbsp;fotela.</h2>
           <p>Krótkie nagrania z&nbsp;moich wizyt. Więcej znajdziesz na Instagramie i&nbsp;TikToku.</p>
         </div>
-        <div class="reels reveal">
+        <div class="reels">
           <figure class="reel is-paused">
             <video muted playsinline loop preload="none" poster="assets/video/metamorfoza-crop.webp"
                    aria-label="Metamorfoza: zarośnięte włosy zamienione w krótki crop z fade’em">
@@ -218,38 +217,38 @@
     <!-- GALERIA -->
     <section class="section gallery" id="galeria">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head">
           <p class="eyebrow">Galeria</p>
           <h2>Z&nbsp;mojego fotela</h2>
           <p>Kliknij zdjęcie, żeby je powiększyć.</p>
         </div>
         <div class="gallery__grid">
-          <a class="gallery__item reveal" href="assets/img/platyna-profil-1280.webp" data-caption="Platynowy blond z teksturą">
+          <a class="gallery__item" href="assets/img/platyna-profil-1280.webp" data-caption="Platynowy blond z teksturą">
             <img src="assets/img/platyna-profil-640.webp" srcset="assets/img/platyna-profil-640.webp 640w, assets/img/platyna-profil-1280.webp 1280w"
                  sizes="(min-width: 960px) 380px, 50vw" width="640" height="853" loading="lazy"
                  alt="Platynowy blond, teksturowany mullet – widok z profilu">
           </a>
-          <a class="gallery__item reveal" href="assets/img/nozyczki-1280.webp" data-caption="Cięcie nożyczkami">
+          <a class="gallery__item" href="assets/img/nozyczki-1280.webp" data-caption="Cięcie nożyczkami">
             <img src="assets/img/nozyczki-640.webp" srcset="assets/img/nozyczki-640.webp 640w, assets/img/nozyczki-1280.webp 1280w"
                  sizes="(min-width: 960px) 380px, 50vw" width="640" height="960" loading="lazy"
                  alt="Barber strzyże klienta nożyczkami na grzebieniu">
           </a>
-          <a class="gallery__item reveal" href="assets/img/platyna-tyl-1280.webp" data-caption="Platyna – widok z tyłu">
+          <a class="gallery__item" href="assets/img/platyna-tyl-1280.webp" data-caption="Platyna – widok z tyłu">
             <img src="assets/img/platyna-tyl-640.webp" srcset="assets/img/platyna-tyl-640.webp 640w, assets/img/platyna-tyl-1280.webp 1280w"
                  sizes="(min-width: 960px) 380px, 50vw" width="640" height="853" loading="lazy"
                  alt="Platynowy blond, teksturowany mullet – widok z tyłu">
           </a>
-          <a class="gallery__item reveal" href="assets/img/stylizacja-1280.webp" data-caption="Stylizacja">
+          <a class="gallery__item" href="assets/img/stylizacja-1280.webp" data-caption="Stylizacja">
             <img src="assets/img/stylizacja-640.webp" srcset="assets/img/stylizacja-640.webp 640w, assets/img/stylizacja-1280.webp 1280w"
                  sizes="(min-width: 960px) 380px, 50vw" width="640" height="960" loading="lazy"
                  alt="Barber układa palcami włosy klienta">
           </a>
-          <a class="gallery__item reveal" href="assets/img/lustro-1280.webp" data-caption="Efekt w lustrze">
+          <a class="gallery__item" href="assets/img/lustro-1280.webp" data-caption="Efekt w lustrze">
             <img src="assets/img/lustro-640.webp" srcset="assets/img/lustro-640.webp 640w, assets/img/lustro-1280.webp 1280w"
                  sizes="(min-width: 960px) 380px, 50vw" width="640" height="960" loading="lazy"
                  alt="Barber i zadowolony klient po strzyżeniu w odbiciu lustra">
           </a>
-          <a class="gallery__item gallery__item--cta reveal" href="https://www.instagram.com/scroolu/" target="_blank" rel="noopener">
+          <a class="gallery__item gallery__item--cta" href="https://www.instagram.com/scroolu/" target="_blank" rel="noopener">
             <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
             <strong>Więcej na Instagramie</strong>
             <span>@scroolu <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
@@ -261,7 +260,7 @@
     <!-- KONTAKT -->
     <section class="section contact" id="kontakt">
       <div class="container contact__grid">
-        <div class="contact__cta reveal">
+        <div class="contact__cta">
           <p class="eyebrow">Rezerwacja</p>
           <h2>Umów wizytę</h2>
           <p>Wybierz usługę i&nbsp;wolny termin w&nbsp;Booksy – bez dzwonienia, o&nbsp;każdej porze. Masz pytanie? Napisz do mnie na Instagramie.</p>
@@ -272,12 +271,12 @@
         </div>
         <div class="contact__info">
           <!-- TODO: adres, godziny i telefon są przykładowe – podmień na swoje -->
-          <div class="info-card reveal">
+          <div class="info-card">
             <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
             <h3>Adres</h3>
             <p>ul. Przykładowa 12<br>00-000 Miasto</p>
           </div>
-          <div class="info-card reveal">
+          <div class="info-card">
             <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
             <h3>Godziny</h3>
             <ul class="hours">
@@ -286,7 +285,7 @@
               <li><span>Niedziela</span><b>nieczynne</b></li>
             </ul>
           </div>
-          <div class="info-card reveal">
+          <div class="info-card">
             <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
             <h3>Kontakt</h3>
             <p><a href="tel:+48000000000">+48 000 000 000</a><br>

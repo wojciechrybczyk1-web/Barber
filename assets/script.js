@@ -23,19 +23,6 @@
   /* Footer year */
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  /* Reveal on scroll */
-  const reveals = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !reduceMotion) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach((el) => io.observe(el));
-  } else {
-    reveals.forEach((el) => el.classList.add('is-visible'));
-  }
-
   /* Reels: play while visible, pause when scrolled away, manual play/pause */
   document.querySelectorAll('.reel').forEach((reel) => {
     const video = reel.querySelector('video');

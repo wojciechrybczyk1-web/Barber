@@ -95,7 +95,9 @@ h3 { font-size: 1.35rem; letter-spacing: .02em; }
 .link-arrow:hover .icon { transform: translateX(4px); }
 
 /* ---------- Header ---------- */
-.header { position: fixed; inset: 0 0 auto; z-index: 50; }
+.header { position: fixed; inset: env(safe-area-inset-top, 0px) 0 auto; z-index: 50; }
+/* paints the phone's status-bar band in apps that draw the page edge to edge */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
 .header::before {
   content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0; transition: opacity .3s;
   background: rgba(14, 13, 12, .84); border-bottom: 1px solid var(--line);
@@ -130,7 +132,7 @@ h3 { font-size: 1.35rem; letter-spacing: .02em; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative; overflow: hidden;
-  min-height: 100vh; min-height: 100svh; display: flex; align-items: center;
+  display: flex; align-items: center;
   padding: 110px 0 72px;
   background:
     radial-gradient(ellipse 55% 55% at 78% 50%, rgba(212, 165, 90, .13), transparent 70%),
@@ -318,10 +320,6 @@ h3 { font-size: 1.35rem; letter-spacing: .02em; }
 .lightbox__prev { left: 14px; top: 50%; transform: translateY(-50%); }
 .lightbox__next { right: 14px; top: 50%; transform: translateY(-50%); }
 
-/* Reveal on scroll (only when JS is running) */
-.js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s cubic-bezier(.2, .7, .2, 1), transform .8s cubic-bezier(.2, .7, .2, 1); }
-.js .reveal.is-visible { opacity: 1; transform: none; }
-
 /* ---------- Responsive ---------- */
 @media (max-width: 1023px) {
   .services__grid { grid-template-columns: repeat(2, 1fr); }
@@ -329,7 +327,7 @@ h3 { font-size: 1.35rem; letter-spacing: .02em; }
 }
 
 @media (max-width: 959px) {
-  .hero { display: block; min-height: 0; padding: 0 0 64px; }
+  .hero { display: block; padding: 0 0 64px; }
   .hero__grid { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
   .hero__media {
     order: -1; width: auto; justify-self: auto;
@@ -396,6 +394,5 @@ h3 { font-size: 1.35rem; letter-spacing: .02em; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .marquee__track { animation: none; }
-  .js .reveal { opacity: 1; transform: none; transition: none; }
   *, *::before, *::after { transition-duration: .01ms !important; }
 }
